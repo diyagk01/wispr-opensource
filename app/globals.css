@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Glass Morphism Styles */
+.glass-filter { 
+  filter: url(#glass-distortion); 
+}
+
+.backdrop-blur-sm { 
+  backdrop-filter: blur(3px); 
+}
+
+.backdrop-blur-md { 
+  backdrop-filter: blur(8px); 
+}
+
+.backdrop-blur-lg { 
+  backdrop-filter: blur(12px); 
+}
+
+.transition-custom { 
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2); 
+}
+
+.beautiful-shadow {
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 
+              0 6.7px 5.3px rgba(0, 0, 0, 0.048), 
+              0 12.5px 10px rgba(0, 0, 0, 0.06), 
+              0 22.3px 17.9px rgba(0, 0, 0, 0.072), 
+              0 41.8px 33.4px rgba(0, 0, 0, 0.086), 
+              0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+}
+
+.pulse-animation {
+  animation: pulse 2s infinite;
+}
+
+.mic-glow {
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.5), 
+              0 0 40px rgba(239, 68, 68, 0.3), 
+              0 0 60px rgba(239, 68, 68, 0.1);
+}
+
+.spinning {
+  animation: spin 1s linear infinite;
+} 
